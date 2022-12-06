@@ -243,7 +243,7 @@ html {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 505px) {
+@media (max-width: 700px) {
   .wrapper {
     max-width: 300px;
   }
@@ -295,7 +295,7 @@ html {
   align-items: center;
   margin-left: 30%;
 }
-@media (max-width: 505px) {
+@media (max-width: 700px) {
   .features-list {
     display: flex;
     flex-direction: column;
@@ -367,7 +367,7 @@ html {
   justify-content: space-between;
 }
 
-@media (max-width: 505px) {
+@media (max-width: 700px) {
   .contact-info {
     display: flex;
     flex-direction: column;
@@ -388,6 +388,7 @@ html {
 /* CONTACT FORM */
 
 input[type="text"],
+input[type="email"],
 select,
 textarea {
   width: 100%;

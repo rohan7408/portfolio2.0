@@ -20,7 +20,18 @@
     />
     <!-- CSS LINK -->
     <link rel="stylesheet" href="style.css" />
-    <title>Responsize Home Page Test</title>
+    <title>Rohan Info</title>
+    <!-- ADSENSE -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5114388936477500"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      custom-element="amp-auto-ads"
+      src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"
+    ></script>
   </head>
   <body>
     <!-- TO THE TOP -->
@@ -91,6 +102,22 @@
         </div>
       </div>
     </div>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5114388936477500"
+      crossorigin="anonymous"
+    ></script>
+    <ins
+      class="adsbygoogle"
+      style="display: block; text-align: center"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="ca-pub-5114388936477500"
+      data-ad-slot="1590578021"
+    ></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     <div id="features" class="my-feature">
       <div class="feature-head"><h1>FEATURES</h1></div>
       <div class="features-list">
@@ -153,36 +180,21 @@
 
     <div class="con-me">
       <div class="container">
-        <form action="/action_page.php">
-          <label for="fname">First Name</label>
-          <input
-            type="text"
-            id="fname"
-            name="firstname"
-            placeholder="Your name.."
-          />
+        <form action="form-handler.php" method="post">
+          <label>First Name</label>
+          <input type="text" name="name" placeholder="Your Name" required />
 
-          <label for="lname">Last Name</label>
-          <input
-            type="text"
-            id="lname"
-            name="lastname"
-            placeholder="Your last name.."
-          />
-          <label for="lname">Your Email</label>
-          <input
-            type="text"
-            id="lname"
-            name="lastname"
-            placeholder="Your Email"
-          />
+          <label>Email</label>
+          <input type="email" name="email" placeholder="Your Email" required />
+          <label>Subject</label>
+          <input type="text" name="subject" placeholder="Subject" required />
 
-          <label for="subject">Subject</label>
+          <label>Message</label>
           <textarea
-            id="subject"
-            name="subject"
-            placeholder="Write something.."
+            placeholder="Message "
+            name="message"
             style="height: 200px"
+            required
           ></textarea>
 
           <input type="submit" value="Submit" />
@@ -243,5 +255,7 @@
         document.documentElement.scrollTop = 0;
       }
     </script>
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-5114388936477500">
+    </amp-auto-ads>
   </body>
 </html>
