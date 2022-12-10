@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="contact.css" />
+    <title>Contact Form</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <button><a href="index.html">GO HOME</a></button>
+      <form>
+        <h2>Contact Us</h2>
+        <input class="name" type="text" name="name" placeholder=" Your Name" />
+        <input
+          class="email"
+          type="email"
+          name="email"
+          placeholder="Your Email"
+        />
+        <textarea
+          class="text"
+          name="message"
+          cols="20"
+          rows="30"
+          placeholder=" Your Message"
+        ></textarea>
+
+        <input type="submit" class="submit" />
+      </form>
+    </div>
+    <script>
+      let url =
+        "https://script.google.com/macros/s/AKfycbxFznMRgxP2pS_DZdVTegUEaY0IT2Mc-_GDh7M1fpdjkfWVViYYtiA0wpH1TPUUeAVQ/exec";
+      let form = document.querySelector("form");
+      let submit = document.querySelector(".submit");
+      let message = document.querySelector(".message");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        submit.value = "submitting..";
+        fetch(url, {
+          method: "POST",
+          body: new FormData(form),
+        })
+          .then((res) => res.text())
+          .then((data) => {
+            message.innerHTML = data;
+            submit.value = "submit";
+          })
+          .catch((err) => {
+            message.innerHTML = err;
+            submit.value = "submit";
+          });
+      });
+    </script>
+  </body>
+</html>
