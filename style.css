@@ -12,11 +12,12 @@ html {
 .home {
   width: 100%;
   height: 600px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.28)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.28)),
     url(images/bimg.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 @media only screen and (max-device-width: 1366px) {
   body {
     background-attachment: scroll;
@@ -82,15 +83,15 @@ html {
   letter-spacing: 3px;
   color: white;
   font-size: 80px;
-  text-shadow: 5px 5px black;
+  text-shadow: 5px 5px rgb(223, 6, 252);
 }
 .home-ctn p {
   letter-spacing: 3px;
   color: white;
-  font-size: 25px;
+  font-size: 27px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-shadow: 2px 2px black;
+  text-shadow: 1.5px 1.5px rgb(226, 9, 9);
 }
 @media only screen and (max-width: 700px) {
   .home-ctn {
@@ -98,8 +99,9 @@ html {
     margin-bottom: 200px;
   }
   .home-ctn h1 {
-    font-size: 40px;
+    font-size: 45px;
     padding: 0%;
+    text-shadow: 2px 2px rgb(6, 252, 10);
   }
   .home-ctn p {
     font-size: 12.5px;
@@ -384,6 +386,9 @@ html {
     width: fit-content;
     height: fit-content;
   }
+  .icon-bar {
+    display: none;
+  }
 }
 
 /* CONTACT FORM */
@@ -458,4 +463,49 @@ html {
 
 #myBtn:hover {
   background-color: blueviolet;
+}
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+*/ .icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.twitter {
+  background: #55acee;
+  color: white;
+}
+
+.git {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.stack {
+  background: #bb0000;
+  color: white;
 }
